@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :complaints
   get 'welcome/index'
 
   resources :challenges
