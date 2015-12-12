@@ -78,6 +78,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    commontator (4.10.5)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
     devise (3.5.3)
@@ -199,6 +202,7 @@ DEPENDENCIES
   byebug
   ckeditor_rails
   coffee-rails (~> 4.1.0)
+  commontator (~> 4.10.0)
   devise
   diffy
   high_voltage

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :challenges
   post '/rate' => 'rater#create', :as => 'rate'
+  mount Commontator::Engine => '/commontator'
   resources :solns
   resources :vprobs
   resources :probs

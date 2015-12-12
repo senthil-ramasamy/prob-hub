@@ -13,6 +13,7 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'ckeditor_rails'
 gem 'ratyrate'	
 gem 'acts_as_votable'
+gem 'commontator', '~> 4.10.0'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
