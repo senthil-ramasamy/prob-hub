@@ -1,138 +1,133 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Pname:</strong>
-  <%= @prob.pname %>
-</p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+      <div class="modal-body">
+        
+        <center>
+        <h2><%= @prob.pname %></h2>
+        <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @prob.person %></li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @prob.pdate %></li>
+          <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @prob.rateing %></li>
+          <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions: </strong><%= @prob.solns.count %></li>
+        </ul>
+        </center>
+        
+        <p><%= @prob.pstatement %></p>
 
-<p>
-  <strong>Pstatement:</strong>
-  <%= @prob.pstatement %>
-</p>
+        
 
-<p>
-  <strong>Pid:</strong>
-  <%= @prob.pid %>
-</p>
-
-<p>
-  <strong>Pdate:</strong>
-  <%= @prob.pdate %>
-</p>
-
-<p>
-  <strong>Person:</strong>
-  <%= @prob.person %>
-</p>
-
-<p>
-  <strong>Votes:</strong>
-  <%= @prob.votes %>
-</p>
-
-<p>
-  <strong>Rateing:</strong>
-  <%= @prob.rateing %>
-</p>
-
-<p>
-  <strong>Points:</strong>
-  <%= @prob.points %>
-</p>
-
-<p>
-  <strong>Tag:</strong>
-  <%= @prob.tag %>
-</p>
-
-<p>
-  <strong>Probstatus:</strong>
-  <%= @prob.probstatus %>
-</p>
-
-<p>
-  <strong>Emp:</strong>
-  <%= @prob.emp %>
-</p>
-
-<p>
-  <strong>Sym:</strong>
-  <%= @prob.sym %>
-</p>
+      
 
 
-<div class="row">
-  <div class="small-2 large-2 columns">
-    <%= imdb_style_rating_for @prob, current_user%>
+        <p>
+          <strong>Votes:</strong>
+          <%= @prob.votes %>
+        </p>
+
+
+
+        <p>
+          <strong>Points:</strong>
+          <%= @prob.points %>
+        </p>
+
+        <p>
+          <strong>Tag:</strong>
+          <%= @prob.tag %>
+        </p>
+
+        <p>
+          <strong>Probstatus:</strong>
+          <%= @prob.probstatus %>
+        </p>
+
+
+
+
+        <div class="row">
+          <div class="small-2 large-2 columns">
+            <%= imdb_style_rating_for @prob, current_user%>
+          </div>
+          <br>
+          <div class="small-2 large-4 columns">
+            <% if current_user %>
+              Visual Effects: <%= rating_for @prob, "Factor1" %>
+              <br>
+              Original Score: <%= rating_for @prob, "Factor2" %>
+              <br>
+              Director: <%= rating_for @prob, "Factor3" %>
+              <br>
+              Custome Design: <%= rating_for @prob, "Factor4" %>
+            <% end %>
+          </div>
+        </div>
+        <%= link_to 'Edit', edit_prob_path(@prob) %> |
+        <%= link_to 'Back', probs_path %>
+
+
+        <h2>Versions of this problem : </h2>
+        <% @prob.vprobs.each do |comment| %>
+          <p>
+            <strong>Version:</strong>
+            <%= comment.pversion %>
+          </p>
+         
+          <p>
+            <strong>Date:</strong>
+            <%= comment.pvdate %>
+          </p>
+          <%= link_to 'Show', comment %>
+        <% end %>
+        <%= form_for([@prob, @prob.vprobs.build]) do |f| %>
+          <p>
+            <%= f.label :VersionName %><br>
+            <%= f.text_field :pvname %>
+          </p>
+          <p>
+            <%= f.label :Version %><br>
+            <%= f.text_area :pversion, :class => 'ckeditor'  %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+
+        <h2>Solutions of this problem : </h2>
+        <% @prob.solns.each do |comment| %>
+          <p>
+            <strong>Soln:</strong>
+            <%= comment.solntext %>
+          </p>
+         
+          <p>
+            <strong>SolnDate:</strong>
+            <%= comment.solndate %>
+          </p>
+          <p>
+            <strong>SolnRatings:</strong>
+            <%= comment.solnrating %>
+          </p>
+          <%= link_to 'View Versions and Edit', edit_soln_path(comment) %>
+        <% end %>
+        <%= form_for([@prob, @prob.solns.build]) do |f| %>
+          <p>
+            <%= f.label :SolnName %><br>
+            <%= f.text_area :solntext, :class => 'ckeditor'  %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+
+</div> 
+
+    
+
+    
+  </section>
   </div>
-  <br>
-  <div class="small-2 large-4 columns">
-    <% if current_user %>
-      Visual Effects: <%= rating_for @prob, "Factor1" %>
-      <br>
-      Original Score: <%= rating_for @prob, "Factor2" %>
-      <br>
-      Director: <%= rating_for @prob, "Factor3" %>
-      <br>
-      Custome Design: <%= rating_for @prob, "Factor4" %>
-    <% end %>
-  </div>
-</div>
-<%= link_to 'Edit', edit_prob_path(@prob) %> |
-<%= link_to 'Back', probs_path %>
-
-
-<h2>Versions of this problem : </h2>
-<% @prob.vprobs.each do |comment| %>
-  <p>
-    <strong>Version:</strong>
-    <%= comment.pversion %>
-  </p>
- 
-  <p>
-    <strong>Date:</strong>
-    <%= comment.pvdate %>
-  </p>
-  <%= link_to 'Show', comment %>
-<% end %>
-<%= form_for([@prob, @prob.vprobs.build]) do |f| %>
-  <p>
-    <%= f.label :VersionName %><br>
-    <%= f.text_field :pvname %>
-  </p>
-  <p>
-    <%= f.label :Version %><br>
-    <%= f.text_area :pversion, :class => 'ckeditor'  %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<h2>Solutions of this problem : </h2>
-<% @prob.solns.each do |comment| %>
-  <p>
-    <strong>Soln:</strong>
-    <%= comment.solntext %>
-  </p>
- 
-  <p>
-    <strong>SolnDate:</strong>
-    <%= comment.solndate %>
-  </p>
-  <p>
-    <strong>SolnRatings:</strong>
-    <%= comment.solnrating %>
-  </p>
-  <%= link_to 'View Versions and Edit', edit_soln_path(comment) %>
-<% end %>
-<%= form_for([@prob, @prob.solns.build]) do |f| %>
-  <p>
-    <%= f.label :SolnName %><br>
-    <%= f.text_area :solntext, :class => 'ckeditor'  %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+</body>
 

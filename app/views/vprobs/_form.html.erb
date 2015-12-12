@@ -2,12 +2,12 @@
   <%= f.error_notification %>
 <div class="container">
   <div class="form-inputs">
-    <%= f.input :pvname %>
-    <%= f.input :pversion %>
-    <%= f.input :pvauthor %>
-    <%= f.input :pvid %>
-    <%= f.input :pvdate %>
-    <%= f.input :pvinteger %>
+    
+    <%= f.input :pversion, label: "Version", placeholder: "Enter Version..." %>
+    <%= f.input :pvauthor, label: "Name of the author", placeholder: "Enter your name..." %>
+    
+    <%= f.input :pvdate, label: "Enter date", placeholder: "dd-mm-yyyy" %>
+    
     <%= f.association :prob %>
   </div>
 

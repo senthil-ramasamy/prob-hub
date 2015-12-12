@@ -3,14 +3,12 @@
 <div class="container">
   <div class="form-inputs">
 
-    <%= f.input :solnname %>
-    <%= f.input :solntext , :class => 'ckeditor' %>
-    <%= f.input :solnauthor %>
-    <%= f.input :solnid %>
-    <%= f.input :solndate %>
+    <%= f.input :solnname , label: "Name of the Solution", placeholder: "Enter name of solution..."%>
+    <%= f.input :solntext , :class => 'ckeditor', label: "Solution", placeholder: "Enter your solution..." %>
+    <%= f.input :solnauthor, label: "Name of the author", placeholder: "Enter your name..." %>
+    <%= f.input :solndate , label: "Date", placeholder: "dd-mm-yyyy"%>
     <%= f.association :prob %>
-    <%= f.input :solnvotes %>
-    <%= f.input :solnrating %>
+    
   </div>
 
   <div class="form-actions">

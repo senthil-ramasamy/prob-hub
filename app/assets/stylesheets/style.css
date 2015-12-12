@@ -12,6 +12,9 @@
 .navbar{
 	background-color: rgba(255, 165, 0, 0.75) !important;
 }
+main{
+	background-color: white !important;
+}
 
 .gr{
 	color: #43484E;
@@ -22,7 +25,10 @@
 	padding: 15px;
 	margin: 5px;
 }
-
+.form-inputs{
+	padding-left: 15%;
+	padding-right: 15%;
+}
 .prob{
 	background-color: white;
 	border-top: 2px rgba(128, 128, 128, 0.37) solid;
@@ -41,6 +47,16 @@ td p{
 	color: #43484E;
 }
 
+td{
+	vertical-align: middle !important;
+}
+.head a{
+	color: black !important;
+}
+
+.head a:hover{
+	color: orange !important;
+}
 .modal-body{
 	background-color: rgba(0, 0, 0, 0.06);
 	margin-top: 25px;

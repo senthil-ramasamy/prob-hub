@@ -33,7 +33,7 @@
               </td>
               <td><h4><%= prob.rateing %><h4></td>
               <td><h4><%= prob.votes %></h4></td>
-              <td style="vertical-align:'middle' !important;"><%= link_to 'Explore !', prob , class: "btn btn-primary btn-sm" %></td>
+              <td ><%= link_to '#' + prob.tag, prob , class: "btn btn-primary btn-sm" %></td>
             </tr>
           </tr>
     <% end %>
