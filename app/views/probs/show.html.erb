@@ -60,6 +60,24 @@
   <%= @prob.sym %>
 </p>
 
+
+<div class="row">
+  <div class="small-2 large-2 columns">
+    <%= imdb_style_rating_for @prob, current_user%>
+  </div>
+  <br>
+  <div class="small-2 large-4 columns">
+    <% if current_user %>
+      Visual Effects: <%= rating_for @prob, "Factor1" %>
+      <br>
+      Original Score: <%= rating_for @prob, "Factor2" %>
+      <br>
+      Director: <%= rating_for @prob, "Factor3" %>
+      <br>
+      Custome Design: <%= rating_for @prob, "Factor4" %>
+    <% end %>
+  </div>
+</div>
 <%= link_to 'Edit', edit_prob_path(@prob) %> |
 <%= link_to 'Back', probs_path %>
 

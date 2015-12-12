@@ -11,6 +11,7 @@ gem 'paper_trail'
 gem 'diffy' 
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'ckeditor_rails'
+gem 'ratyrate'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
