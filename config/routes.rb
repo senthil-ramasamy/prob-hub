@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :challenges
   post '/rate' => 'rater#create', :as => 'rate'
   resources :solns
   resources :vprobs

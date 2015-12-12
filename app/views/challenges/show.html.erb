@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chaltext:</strong>
+  <%= @challenge.chaltext %>
+</p>
+
+<p>
+  <strong>Chalname:</strong>
+  <%= @challenge.chalname %>
+</p>
+
+<p>
+  <strong>Chaldate:</strong>
+  <%= @challenge.chaldate %>
+</p>
+
+<p>
+  <strong>Chalprize:</strong>
+  <%= @challenge.chalprize %>
+</p>
+
+<p>
+  <strong>Chalsponsor:</strong>
+  <%= @challenge.chalsponsor %>
+</p>
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>
