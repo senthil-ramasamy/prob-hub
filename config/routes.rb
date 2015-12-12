@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :challenges
   post '/rate' => 'rater#create', :as => 'rate'
   mount Commontator::Engine => '/commontator'

@@ -1,48 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Probs</h1>
+<div class="container qw">
+    
 
-<table>
-  <thead>
-    <tr>
-      <th>Pname</th>
-      <th>Pstatement</th>
-      <th>Pid</th>
-      <th>Pdate</th>
-      <th>Person</th>
-      <th>Votes</th>
-      <th>Rateing</th>
-      <th>Points</th>
-      <th>Tag</th>
-      <th>Probstatus</th>
-      <th>Emp</th>
-      <th>Sym</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @probs.each do |prob| %>
-      <tr>
-        <td><%= prob.pname %></td>
-        <td><%= prob.pstatement %></td>
-        <td><%= prob.pid %></td>
-        <td><%= prob.pdate %></td>
-        <td><%= prob.person %></td>
-        <td><%= prob.votes %></td>
-        <td><%= prob.rateing %></td>
-        <td><%= prob.points %></td>
-        <td><%= prob.tag %></td>
-        <td><%= prob.probstatus %></td>
-        <td><%= prob.emp %></td>
-        <td><%= prob.sym %></td>
-        <td><%= link_to 'Show', prob %></td>
-        <td><%= link_to 'Edit', edit_prob_path(prob) %></td>
-        <td><%= link_to 'Destroy', prob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-         <td><%= link_to "upvote", like_prob_path(prob), method: :put %></td>
-         <td><%= link_to "downvote", dislike_prob_path(prob), method: :put %></td>
-         <td><%= prob.get_upvotes.size - prob.get_downvotes.size  %></td>
-      </tr>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Votes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @probs.each do |prob| %>
+            <tr>
+              <td><h4><%= prob.pid %><h4></td>
+              <td>
+                <h4 class="head"><%= prob.pname %></h4>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= prob.person %></li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= prob.pdate %></li>
+                  <li><i class="glyphicon glyphicon-star"></i><strong> Ratings: <%= prob.rateing %></strong></li>
+                  <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions:</strong></li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                
+              </td>
+              <td><h4><%= prob.rateing %><h4></td>
+              <td><h4><%= prob.votes %></h4></td>
+            </tr>
+          </tr>
     <% end %>
   </tbody>
 </table>
