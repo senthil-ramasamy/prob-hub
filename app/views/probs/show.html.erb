@@ -67,8 +67,9 @@
         <%= link_to 'Edit', edit_prob_path(@prob) %> |
         <%= link_to 'Back', probs_path %>
 
-
-        <h2>Versions of this problem : </h2>
+        
+        <h2>Versions of this problem : </h2><button class="btn btn-primary btn-md pro">Show</button><button class="btn btn-primary btn-md pro2">Hide</button>
+        <div class="mast">
         <% @prob.vprobs.each do |comment| %>
           <p>
             <strong>Version:</strong>
@@ -94,8 +95,13 @@
             <%= f.submit %>
           </p>
         <% end %>
+        </div>
 
-        <h2>Solutions of this problem : </h2>
+        
+
+        
+        <h2>Solutions of this problem : </h2><button class="btn btn-primary btn-md slo">Show</button><button class="btn btn-primary btn-md slo2">Hide</button>
+        <div class="mast2">
         <% @prob.solns.each do |comment| %>
           <p>
             <strong>Soln:</strong>
@@ -121,6 +127,7 @@
             <%= f.submit %>
           </p>
         <% end %>
+        </div>
 
 </div> 
 

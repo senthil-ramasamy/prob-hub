@@ -108,3 +108,33 @@ function Scroll() {
 });
 
 
+//custom
+
+jQuery(document).ready(function(){
+	$(".mast").hide();
+	$(".mast2").hide();
+	$(".slo2").hide();
+	$(".pro2").hide();
+
+	$(".pro").click(function(){
+	    $(".mast").toggle("slow","swing");
+	    $(".pro2").toggle();
+	    $(".pro").toggle();
+	});
+	$(".pro2").click(function(){
+	    $(".mast").toggle("slow","swing");
+	    $(".pro2").toggle();
+	    $(".pro").toggle();
+	});
+	$(".slo").click(function(){
+	    $(".mast2").toggle("slow","swing");
+	    $(".slo2").toggle();
+	    $(".slo").toggle();
+	});
+	$(".slo2").click(function(){
+	    $(".mast2").toggle("slow","swing");
+	    $(".slo2").toggle();
+	    $(".slo").toggle();
+	});
+	
+});

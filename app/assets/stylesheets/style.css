@@ -37,6 +37,13 @@ main{
 	margin: 5px;
 }
 
+li{
+	text-align: left;
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
+}
+
 td li{
 	text-align: left;
 	list-style: none;
