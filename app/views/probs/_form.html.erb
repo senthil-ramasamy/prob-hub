@@ -2,22 +2,14 @@
   <%= f.error_notification %>
   <div class="container">
     <div class="form-inputs">
-      <%= f.input :pname %>
+      <%= f.input :pname, label: "Project Title" , placeholder: "Enter appropriate title..." %><br/>
       <%= f.text_area :pstatement, :class => 'ckeditor' %>
-      <%= f.input :pid %>
-      <%= f.input :pdate %>
       <%= f.input :person %>
-      <%= f.input :votes %>
-      <%= f.input :rateing %>
-      <%= f.input :points %>
       <%= f.input :tag %>
-      <%= f.input :probstatus %>
-      <%= f.input :emp %>
-      <%= f.input :sym %>
     </div>
-
     <div class="form-actions">
-      <%= f.button :submit %>
+      <%= f.button :submit, class: "btn btn-primary btn-md" %> 
+      <%= link_to 'Back', probs_path, class: "btn btn-primary btn-md" %>
     </div>
   </div>
 <% end %>
