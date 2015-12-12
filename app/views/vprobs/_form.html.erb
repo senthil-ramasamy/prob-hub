@@ -1,6 +1,6 @@
 <%= simple_form_for(@vprob) do |f| %>
   <%= f.error_notification %>
-
+<div class="container">
   <div class="form-inputs">
     <%= f.input :pvname %>
     <%= f.input :pversion %>
@@ -14,4 +14,5 @@
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
+</div>
 <% end %>
