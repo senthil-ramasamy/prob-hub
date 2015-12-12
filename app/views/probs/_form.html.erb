@@ -1,0 +1,22 @@
+<%= simple_form_for(@prob) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :pname %>
+    <%= f.input :pstatement %>
+    <%= f.input :pid %>
+    <%= f.input :pdate %>
+    <%= f.input :person %>
+    <%= f.input :votes %>
+    <%= f.input :rateing %>
+    <%= f.input :points %>
+    <%= f.input :tag %>
+    <%= f.input :probstatus %>
+    <%= f.input :emp %>
+    <%= f.input :sym %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

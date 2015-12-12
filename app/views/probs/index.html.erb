@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Probs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pname</th>
+      <th>Pstatement</th>
+      <th>Pid</th>
+      <th>Pdate</th>
+      <th>Person</th>
+      <th>Votes</th>
+      <th>Rateing</th>
+      <th>Points</th>
+      <th>Tag</th>
+      <th>Probstatus</th>
+      <th>Emp</th>
+      <th>Sym</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @probs.each do |prob| %>
+      <tr>
+        <td><%= prob.pname %></td>
+        <td><%= prob.pstatement %></td>
+        <td><%= prob.pid %></td>
+        <td><%= prob.pdate %></td>
+        <td><%= prob.person %></td>
+        <td><%= prob.votes %></td>
+        <td><%= prob.rateing %></td>
+        <td><%= prob.points %></td>
+        <td><%= prob.tag %></td>
+        <td><%= prob.probstatus %></td>
+        <td><%= prob.emp %></td>
+        <td><%= prob.sym %></td>
+        <td><%= link_to 'Show', prob %></td>
+        <td><%= link_to 'Edit', edit_prob_path(prob) %></td>
+        <td><%= link_to 'Destroy', prob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prob', new_prob_path %>

@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212075352) do
+ActiveRecord::Schema.define(version: 20151212080333) do
+
+  create_table "probs", force: :cascade do |t|
+    t.string   "pname"
+    t.text     "pstatement"
+    t.integer  "pid"
+    t.date     "pdate"
+    t.string   "person"
+    t.integer  "votes"
+    t.integer  "rateing"
+    t.integer  "points"
+    t.string   "tag"
+    t.string   "probstatus"
+    t.integer  "emp"
+    t.integer  "sym"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
