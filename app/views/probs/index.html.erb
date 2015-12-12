@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <div class ="row">
-    <div class="page-header">
-<h1>Problems Probs</h1>
-</div>
-<div class="container qw">
-    
+  
+<div class="jumbotron">
+  <center><h2>Problems Exploration!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Problem</a></p></center>
 </div>
     <table class="table">
         <thead>
@@ -14,6 +13,7 @@
             <th>Title</th>
             <th>Status</th>
             <th>Votes</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
             <tr>
               <td><h4><%= prob.pid %><h4></td>
               <td>
-                <h4 class="head"><%= prob.pname %></h4>
+                <h3 class="head"><%= link_to prob.pname , prob  %></h3>
                 <ul class="post-meta">
                   <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= prob.person %></li>
                   <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= prob.pdate %></li>
@@ -33,6 +33,7 @@
               </td>
               <td><h4><%= prob.rateing %><h4></td>
               <td><h4><%= prob.votes %></h4></td>
+              <td style="vertical-align:'middle' !important;"><%= link_to 'Explore !', prob , class: "btn btn-primary btn-sm" %></td>
             </tr>
           </tr>
     <% end %>
@@ -42,5 +43,5 @@
 
 </div>
 <br>
-
-<%= link_to 'New Prob', new_prob_path %>
+<center>
+<%= link_to '+ Add Problem', new_prob_path, class: "btn btn-primary btn-md" %></center>
