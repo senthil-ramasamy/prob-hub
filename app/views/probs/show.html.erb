@@ -83,7 +83,7 @@
   </p>
   <p>
     <%= f.label :Version %><br>
-    <%= f.text_area :pversion %>
+    <%= f.text_area :pversion, :class => 'ckeditor'  %>
   </p>
   <p>
     <%= f.submit %>
@@ -110,7 +110,7 @@
 <%= form_for([@prob, @prob.solns.build]) do |f| %>
   <p>
     <%= f.label :SolnName %><br>
-    <%= f.text_field :solntext %>
+    <%= f.text_area :solntext, :class => 'ckeditor'  %>
   </p>
   <p>
     <%= f.submit %>
