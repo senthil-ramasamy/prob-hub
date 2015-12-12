@@ -61,6 +61,18 @@ class ProbsController < ApplicationController
     end
   end
 
+  def upvote
+    @prob = Prob.find(params[:id])
+    @prob.upvote_by current_user
+    redirect_to probs_path
+  end
+
+  def downvote
+    @prob = Prob.find(params[:id])
+    @prob.downvote_by current_user
+    redirect_to probs_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_prob

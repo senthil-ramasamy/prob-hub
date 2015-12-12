@@ -63,6 +63,21 @@ class SolnsController < ApplicationController
     end
   end
 
+
+  def upvote
+    @soln = Soln.find(params[:id])
+    @soln.upvote_by current_user
+    redirect_to soln_path
+  end
+
+  def downvote
+    @soln = Soln.find(params[:id])
+    @soln.downvote_by current_user
+    redirect_to solns_path
+  end
+
+  
+
   def diff(content1, content2)
    changes = Diffy::Diff.new(content1, content2, 
                              include_plus_and_minus_in_html: true, 

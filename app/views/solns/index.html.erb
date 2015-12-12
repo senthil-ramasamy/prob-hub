@@ -31,6 +31,9 @@
         <td><%= link_to 'Show', soln %></td>
         <td><%= link_to 'Edit', edit_soln_path(soln) %></td>
         <td><%= link_to 'Destroy', soln, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "upvote", like_soln_path(soln), method: :put %></td>
+        <td><%= link_to "downvote", dislike_soln_path(soln), method: :put %></td>
+        <td><%= soln.get_upvotes.size - soln.get_downvotes.size %></td>
       </tr>
     <% end %>
   </tbody>

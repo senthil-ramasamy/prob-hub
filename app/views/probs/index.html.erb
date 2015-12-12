@@ -39,6 +39,9 @@
         <td><%= link_to 'Show', prob %></td>
         <td><%= link_to 'Edit', edit_prob_path(prob) %></td>
         <td><%= link_to 'Destroy', prob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <td><%= link_to "upvote", like_prob_path(prob), method: :put %></td>
+         <td><%= link_to "downvote", dislike_prob_path(prob), method: :put %></td>
+         <td><%= prob.get_upvotes.size - prob.get_downvotes.size  %></td>
       </tr>
     <% end %>
   </tbody>

@@ -10,6 +10,18 @@ Rails.application.routes.draw do
   		resources :vprobs	
   		resources :solns
 	end
+  resources :probs do
+  member do
+      put "like", to: "probs#upvote"
+      put "dislike", to: "probs#downvote"
+    end
+  end
+  resources :solns do
+  member do
+      put "like", to: "solns#upvote"
+      put "dislike", to: "solns#downvote"
+    end
+  end
   resources :solns do
   resources :versions, only: [:destroy] do
       member do
