@@ -1,0 +1,17 @@
+<%= simple_form_for(@vprob) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :pvname %>
+    <%= f.input :pversion %>
+    <%= f.input :pvauthor %>
+    <%= f.input :pvid %>
+    <%= f.input :pvdate %>
+    <%= f.input :pvinteger %>
+    <%= f.association :prob %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<%= simple_form_for(@soln) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :solnname %>
+    <%= f.input :solntext %>
+    <%= f.input :solnauthor %>
+    <%= f.input :solnid %>
+    <%= f.input :solndate %>
+    <%= f.association :prob %>
+    <%= f.input :solnvotes %>
+    <%= f.input :solnrating %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

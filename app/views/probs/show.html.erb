@@ -62,3 +62,57 @@
 
 <%= link_to 'Edit', edit_prob_path(@prob) %> |
 <%= link_to 'Back', probs_path %>
+
+
+<h2>Versions of this problem : </h2>
+<% @prob.vprobs.each do |comment| %>
+  <p>
+    <strong>Version:</strong>
+    <%= comment.pversion %>
+  </p>
+ 
+  <p>
+    <strong>Date:</strong>
+    <%= comment.pvdate %>
+  </p>
+<% end %>
+<%= form_for([@prob, @prob.vprobs.build]) do |f| %>
+  <p>
+    <%= f.label :VersionName %><br>
+    <%= f.text_field :pvname %>
+  </p>
+  <p>
+    <%= f.label :Version %><br>
+    <%= f.text_area :pversion %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<h2>Solutions of this problem : </h2>
+<% @prob.solns.each do |comment| %>
+  <p>
+    <strong>Soln:</strong>
+    <%= comment.solntext %>
+  </p>
+ 
+  <p>
+    <strong>SolnDate:</strong>
+    <%= comment.solndate %>
+  </p>
+  <p>
+    <strong>SolnRatings:</strong>
+    <%= comment.solnrating %>
+  </p>
+  
+<% end %>
+<%= form_for([@prob, @prob.solns.build]) do |f| %>
+  <p>
+    <%= f.label :SolnName %><br>
+    <%= f.text_field :solntext %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

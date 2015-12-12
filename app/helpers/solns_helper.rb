@@ -1,0 +1,2 @@
+module SolnsHelper
+end

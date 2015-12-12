@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212080333) do
+ActiveRecord::Schema.define(version: 20151212110507) do
 
   create_table "probs", force: :cascade do |t|
     t.string   "pname"
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 20151212080333) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "solns", force: :cascade do |t|
+    t.string   "solnname"
+    t.text     "solntext"
+    t.string   "solnauthor", default: "Senthil"
+    t.integer  "solnid"
+    t.date     "solndate"
+    t.integer  "prob_id"
+    t.integer  "solnvotes"
+    t.integer  "solnrating"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "solns", ["prob_id"], name: "index_solns_on_prob_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -49,5 +64,19 @@ ActiveRecord::Schema.define(version: 20151212080333) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "vprobs", force: :cascade do |t|
+    t.string   "pvname"
+    t.text     "pversion"
+    t.string   "pvauthor",   default: "Doe"
+    t.integer  "pvid"
+    t.date     "pvdate"
+    t.integer  "pvinteger"
+    t.integer  "prob_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "vprobs", ["prob_id"], name: "index_vprobs_on_prob_id"
 
 end

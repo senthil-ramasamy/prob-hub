@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Solnname:</strong>
+  <%= @soln.solnname %>
+</p>
+
+<p>
+  <strong>Solntext:</strong>
+  <%= @soln.solntext %>
+</p>
+
+<p>
+  <strong>Solnauthor:</strong>
+  <%= @soln.solnauthor %>
+</p>
+
+<p>
+  <strong>Solnid:</strong>
+  <%= @soln.solnid %>
+</p>
+
+<p>
+  <strong>Solndate:</strong>
+  <%= @soln.solndate %>
+</p>
+
+<p>
+  <strong>Prob:</strong>
+  <%= @soln.prob %>
+</p>
+
+<p>
+  <strong>Solnvotes:</strong>
+  <%= @soln.solnvotes %>
+</p>
+
+<p>
+  <strong>Solnrating:</strong>
+  <%= @soln.solnrating %>
+</p>
+
+<%= link_to 'Edit', edit_soln_path(@soln) %> |
+<%= link_to 'Back', solns_path %>
