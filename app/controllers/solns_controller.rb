@@ -1,6 +1,7 @@
 class SolnsController < ApplicationController
   before_action :set_soln, only: [:show, :edit, :update, :destroy]
 
+  before_action :set_soln_and_version, only: [:diff, :rollback, :destroy]
   # GET /solns
   # GET /solns.json
   def index
@@ -62,6 +63,20 @@ class SolnsController < ApplicationController
     end
   end
 
+  def diff(content1, content2)
+   changes = Diffy::Diff.new(content1, content2, 
+                             include_plus_and_minus_in_html: true, 
+                             include_diff_info: true)
+   changes.to_s.present? ? changes.to_s(:html).html_safe : 'No Changes'
+  end
+  def rollback
+    # change the current document to the specified version
+    # reify gives you the object of this version
+    soln = @version.reify
+    soln.save
+    redirect_to edit_soln_path(document)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_soln
@@ -72,4 +87,17 @@ class SolnsController < ApplicationController
     def soln_params
       params.require(:soln).permit(:solnname, :solntext, :solnauthor, :solnid, :solndate, :prob_id, :solnvotes, :solnrating)
     end
+
+    def set_document_and_version
+      @soln = Soln.find(params[:soln_id])
+      @version = @soln.versions.find(params[:id])
+    end
 end
+
+
+
+
+ 
+  private
+
+    

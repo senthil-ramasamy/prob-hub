@@ -9,4 +9,12 @@ Rails.application.routes.draw do
   		resources :vprobs	
   		resources :solns
 	end
+  resources :solns do
+  resources :versions, only: [:destroy] do
+      member do
+      get :diff, to: 'versions#diff'
+      patch :rollback, to: 'versions#rollback'
+      end
+  end
+  end
 end

@@ -86,6 +86,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    diffy (3.0.7)
     erubis (2.7.0)
     execjs (2.6.0)
     globalid (0.3.6)
@@ -196,6 +197,7 @@ DEPENDENCIES
   ckeditor_rails
   coffee-rails (~> 4.1.0)
   devise
+  diffy
   high_voltage
   jbuilder (~> 2.0)
   jquery-rails

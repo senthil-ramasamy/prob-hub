@@ -75,6 +75,7 @@
     <strong>Date:</strong>
     <%= comment.pvdate %>
   </p>
+  <%= link_to 'Show', comment %>
 <% end %>
 <%= form_for([@prob, @prob.vprobs.build]) do |f| %>
   <p>
@@ -105,7 +106,7 @@
     <strong>SolnRatings:</strong>
     <%= comment.solnrating %>
   </p>
-  
+  <%= link_to 'View Versions and Edit', edit_soln_path(comment) %>
 <% end %>
 <%= form_for([@prob, @prob.solns.build]) do |f| %>
   <p>
@@ -116,3 +117,4 @@
     <%= f.submit %>
   </p>
 <% end %>
+

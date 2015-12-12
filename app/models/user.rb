@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
+  has_many :solns
+  def self.find_version_author(version)
+    find(version.terminator)   
+  end
 
   def set_default_role
     self.role ||= :user
