@@ -17,6 +17,16 @@ class ProbsController < ApplicationController
     @prob = Prob.new
   end
 
+
+
+  def feed
+    @probs = Prob.all
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
+  end
+
+
   # GET /probs/1/edit
   def edit
   end

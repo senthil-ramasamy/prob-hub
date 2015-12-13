@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :complaints
   get 'welcome/index'
+  get 'feed' => 'probs#feed'
 
   resources :challenges
   post '/rate' => 'rater#create', :as => 'rate'
