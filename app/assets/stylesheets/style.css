@@ -16,10 +16,14 @@ main{
 	background-color: white !important;
 }
 
+
 .gr{
 	color: #43484E;
 }
 
+.star img{
+	display: inline;
+}
 .prob:hover{
 	background-color: #F7F7F7;
 	padding: 15px;

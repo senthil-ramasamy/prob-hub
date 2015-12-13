@@ -28,7 +28,7 @@
                   <li><i class="glyphicon glyphicon-star"></i><strong> Ratings: <%= soln.solnrating %></strong></li>
                   <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions:</strong></li>
                 </ul>
-                <p><%= soln.solntext.first(150) %></p>
+                <p><%= raw(soln.solntext.first(150))%></p>
                 <td><%= link_to 'Explore !', soln, class: "btn btn-primary btn-md" %></td>
               </td>
               <td><h4><%= soln.solnrating %><h4></td>

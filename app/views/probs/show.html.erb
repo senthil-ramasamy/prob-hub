@@ -68,7 +68,13 @@
       
 
 
-        <p>
+
+
+
+
+        <div class="row">
+          <div class="small-2 large-2 columns">
+                    <p>
           <strong>Votes:</strong>
           <%= @prob.votes %>
         </p>
@@ -89,24 +95,13 @@
           <strong>Probstatus:</strong>
           <%= @prob.probstatus %>
         </p>
-
-
-
-
-        <div class="row">
-          <div class="small-2 large-2 columns">
             <%= imdb_style_rating_for @prob, current_user%>
           </div>
           <br>
           <div class="small-2 large-4 columns">
             <% if current_user %>
-              Visual Effects: <%= rating_for @prob, "Factor1" %>
-              <br>
-              Original Score: <%= rating_for @prob, "Factor2" %>
-              <br>
-              Director: <%= rating_for @prob, "Factor3" %>
-              <br>
-              Custome Design: <%= rating_for @prob, "Factor4" %>
+              Rating on Various Factors: 
+               <%= rating_for @prob, "Factor1" %>
             <% end %>
           </div>
         </div>
@@ -120,7 +115,7 @@
   <h1>Lets find Solution of this ?</h1>
  <% @prob.solns.each do |comment| %>
 <blockquote>
-  <p><%= comment.solntext %></p>
+  <p><%= raw(comment.solntext) %></p>
           
   <footer><%= comment.solndate %> | Rated : <%= comment.solnrating %> | <%= link_to 'View Versions and Edit', edit_soln_path(comment)%></footer>
 </blockquote>
