@@ -7,7 +7,7 @@
 				<li data-target="#main-carousel" data-slide-to="2"></li>
 			</ol><!--/.carousel-indicators--> 
 			<div class="carousel-inner">
-				<div class="item active" style="background-image: url(images/slider/slide3.jpg)"> 
+				<div class="item active" style="background-image: url(https://www.emptyengine.com/wp-content/uploads/2015/11/What-is-Digital-India.jpg)"> 
 					<div class="carousel-caption"> 
 						<div> 
 							<h2 class="heading animated bounceInDown">Problems are just Challenges</h2> 
@@ -18,7 +18,7 @@
 				</div>
 				<div class="item" style="background-image: url(images/slider/slide2.jpg)"> 
 					<div class="carousel-caption"> <div> 
-						<h2 class="heading animated bounceInDown">Get All in Onepage</h2> 
+						<h2 class="heading animated bounceInDown">Lets make it a sport !</h2> 
 						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
 					</div> 
 				</div> 
@@ -26,8 +26,8 @@
 			<div class="item" style="background-image: url(images/slider/slide1.jpg)"> 
 				<div class="carousel-caption"> 
 					<div> 
-						<h2 class="heading animated bounceInRight">Fully Responsive Template</h2> 
-						<p class="animated bounceInLeft">100% Responsive HTML template</p> 
+						<h2 class="heading animated bounceInRight">Prachana : Lets start playing !</h2> 
+						<p class="animated bounceInLeft">Collaborative Solution Building</p> 
 						<a class="btn btn-default slider-btn animated bounceInUp" href="#">Get Started</a> 
 					</div> 
 				</div> 
@@ -47,99 +47,27 @@
 							<div class="row text-center clearfix">
 								<div class="col-sm-8 col-sm-offset-2">
 									<a href="problems.html"><h2 class="title-one">Problems</h2></a>
-									<p class="blog-heading">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+									<p class="blog-heading">Problems are the place where innovation starts ! <br/>Hunt big, Innovate Big !</p>
 								</div>
 							</div> 
 							<div class="row">
+								<% @problems.each do |prob| %>
 								<div class="col-sm-4">
 									<div class="single-blog">
 										<img src="images/blog/1.jpg" alt="" />
-										<h2>Lorem ipsum dolor sit amet</h2>
+										<h2><%= link_to prob.pname , prob  %></h2>
 										<ul class="post-meta">
 											<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2015</li>
 										</ul>
 										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+											<p><%= prob.pstatement.first(100) %></p>
 										</div>
-										<a href="" class="btn btn-primary">Read More</a>
+										<a href="/probs" class="btn btn-primary">Read More</a>
 									</div>
 									
 								</div>
-								<div class="col-sm-4">
-									<div class="single-blog">
-										<img src="images/blog/2.jpg" alt="" />
-										<h2>Lorem ipsum dolor sit amet</h2>
-										<ul class="post-meta">
-											<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-										</ul>
-										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-										</div>
-										<a href="" class="btn btn-primary" >Read More</a>
-									</div>
-									
-								</div>
-								<div class="col-sm-4">
-									<div class="single-blog">
-										<img src="images/blog/3.jpg" alt="" />
-										<h2>Lorem ipsum dolor sit amet</h2>
-										<ul class="post-meta">
-											<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-										</ul>
-										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-										</div>
-										<a href="" class="btn btn-primary" >Read More</a>
-									</div>
-									
-								</div>
-								<div class="col-sm-4">
-									<div class="single-blog">
-										<img src="images/blog/3.jpg" alt="" />
-										<h2>Lorem ipsum dolor sit amet</h2>
-										<ul class="post-meta">
-											<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-										</ul>
-										<div class="blog-content">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-										</div>
-										<a href="" class="btn btn-primary" >Read More</a></div>
-										
-									</div>
-									<div class="col-sm-4">
-										<div class="single-blog">
-											<img src="images/blog/2.jpg" alt="" />
-											<h2>Lorem ipsum dolor sit amet</h2>
-											<ul class="post-meta">
-												<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-												<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-											</ul>
-											<div class="blog-content">
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-											</div>
-											<a href="" class="btn btn-primary" >Read More</a>
-										</div>
-										
-									</div>
-
-									<div class="col-sm-4">
-										<div class="single-blog">
-											<img src="images/blog/1.jpg" alt="" />
-											<h2>Lorem ipsum dolor sit amet</h2>
-											<ul class="post-meta">
-												<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-												<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
-											</ul>
-											<div class="blog-content">
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-											</div>
-											<a href="" class="btn btn-primary" >Read More</a>
-										</div>
-										
+								<% end %>	
 									</div> 
 								</div> 
 							</div> 
@@ -149,7 +77,7 @@
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h2 class="title-one">Services</h2>
+					<h2 class="title-one">Solutions</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 				</div>
 			</div>
@@ -157,27 +85,16 @@
 				<div class="col-sm-12">
 					<div class="our-service">
 						<div class="services row">
+							<% @solns.each do |soln| %>
 							<div class="col-sm-4">
 								<div class="single-service">
-									<i class="fa fa-th"></i>
-									<h2>Modern Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+									<i class=" fa fa-hourglass-start "></i>
+									<h2><%= link_to soln.solnname , soln  %></h2>
+									<p><%= soln.solntext.first(250) %></p>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<div class="single-service">
-									<i class="fa fa-html5"></i>
-									<h2>Web Development</h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy </p>
-								</div>
+							<% end %>
 							</div>
-							<div class="col-sm-4">
-								<div class="single-service">
-									<i class="fa fa-users"></i>
-									<h2>Online Marketing</h2>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-								</div>
-							</div></div>
 						</div>
 					</div>
 				</div>
@@ -188,7 +105,7 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="title-one">Meet The Team</h2>
+						<h2 class="title-one">Challenges</h2>
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
 					</div>
 				</div>
@@ -197,128 +114,16 @@
 					<a class="member-right" href="#team-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					<div class="carousel-inner team-members">
 						<div class="row item active">
+						<% @challenges.each do |challenge| %>	
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
-									<img src="images/our-team/member1.jpg" alt="team member" />
-									<h4>William Hurt</h4>
-									<h5>Sr. Web Developer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
+									<img src="http://www.clker.com/cliparts/f/A/y/K/p/Q/solution-md.png" />
+									<h4><%= challenge.chalname %></h4>
+									<h5>Rs.<%= challenge.chalprize %></h5>
+									<p><%= challenge.chaltext.first(150) %></p>
 								</div>
 							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member2.jpg" alt="team member" />
-									<h4>Alekjandra Jony</h4>
-									<h5>Creative Designer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member3.jpg" alt="team member" />
-									<h4>Paul Johnson</h4>
-									<h5>Skilled Programmer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member4.jpg" alt="team member" />
-									<h4>John Richerds</h4>
-									<h5>Marketing Officer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row item">
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member1.jpg" alt="team member" />
-									<h4>William Hurt</h4>
-									<h5>Sr. Web Developer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member3.jpg" alt="team member" />
-									<h4>Paul Johnson</h4>
-									<h5>Skilled Programmer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member2.jpg" alt="team member" />
-									<h4>Alekjandra Jony</h4>
-									<h5>Creative Designer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="images/our-team/member4.jpg" alt="team member" />
-									<h4>John Richerds</h4>
-									<h5>Marketing Officer</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
-									<div class="socials">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-google-plus"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
+							<% end %>
 						</div>
 					</div>
 				</div>
@@ -329,179 +134,19 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="title-one">Portfolio</h2>
+						<h2 class="title-one">Complaint Log it Up !</h2>
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+						<a class="btn btn-primary" href="/complaints">Complaints</a>
 					</div>
 				</div>
-				<ul class="portfolio-filter text-center">
-					<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
-					<li><a class="btn btn-default" href="#" data-filter=".html">Html</a></li>
-					<li><a class="btn btn-default" href="#" data-filter=".wordpress">Wordpress</a></li>
-					<li><a class="btn btn-default" href="#" data-filter=".joomla">Joomla</a></li>
-					<li><a class="btn btn-default" href="#" data-filter=".megento">Megento</a></li>
-				</ul><!--/#portfolio-filter-->
-				<div class="portfolio-items">
-					<div class="col-sm-3 col-xs-12 portfolio-item html">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="images/portfolio/1.jpg" alt=""></div> 
-								<div class="mask text-center">
-									<h3>Novel</h3>
-									<h4>Lorem ipsum dolor sit amet consectetur</h4>
-									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12 portfolio-item jooma">
-							<div class="view efffect" >
-								<div class="portfolio-image">
-									<img src="images/portfolio/2.jpg" alt="">
-								</div> 
-								<div class="mask text-center">
-									<h3>Novel</h3>
-									<h4>Lorem ipsum dolor sit amet consectetur</h4>
-									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio/big-item4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-							<div class="view efffect">
-								<div class="portfolio-image">
-									<img src="images/portfolio/3.jpg" alt="">
-								</div> 
-								<div class="mask text-center">
-								<h3>Novel</h3>
-								<h4>Lorem ipsum dolor sit amet consectetur</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-12 portfolio-item megento">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="images/portfolio/4.jpg" alt="">
-							</div> 
-							<div class="mask text-center">
-								<h3>Novel</h3>
-								<h4>Lorem ipsum dolor sit amet consectetur</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-12 portfolio-item html">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="images/portfolio/5.jpg" alt="">
-							</div> <div class="mask text-center">
-							<h3>Novel</h3>
-							<h4>Lorem ipsum dolor sit amet consectetur</h4>
-							<a href="#"><i class="fa fa-link"></i></a>
-							<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-					<div class="view efffect">
-						<div class="portfolio-image">
-							<img src="images/portfolio/6.jpg" alt="">
-						</div> 
-						<div class="mask text-center">
-							<h3>Novel</h3>
-							<h4>Lorem ipsum dolor sit amet consectetur</h4>
-							<a href="#"><i class="fa fa-link"></i></a>
-							<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-xs-12 portfolio-item html">
-					<div class="view efffect">
-						<div class="portfolio-image">
-							<img src="images/portfolio/7.jpg" alt="">
-						</div> 
-						<div class="mask text-center">
-							<h3>Novel</h3>
-							<h4>Lorem ipsum dolor sit amet consectetur</h4>
-							<a href="#"><i class="fa fa-link"></i></a>
-							<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-xs-12 portfolio-item joomla">
-					<div class="view efffect">
-						<div class="portfolio-image">
-							<img src="images/portfolio/8.jpg" alt=""></div> 
-							<div class="mask text-center">
-								<h3>Novel</h3>
-								<h4>Lorem ipsum dolor sit amet consectetur</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-12 portfolio-item html">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="images/portfolio/9.jpg" alt="">
-							</div> 
-							<div class="mask text-center">
-								<h3>Novel</h3>
-								<h4>Lorem ipsum dolor sit amet consectetur</h4>
-								<a href="#"><i class="fa fa-link"></i></a>
-								<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-12 portfolio-item wordpress">
-						<div class="view efffect">
-							<div class="portfolio-image">
-								<img src="images/portfolio/10.jpg" alt=""></div> 
-								<div class="mask text-center">
-									<h3>Novel</h3>
-									<h4>Lorem ipsum dolor sit amet consectetur</h4>
-									<a href="#"><i class="fa fa-link"></i></a>
-									<a href="images/portfolio/big-item.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 col-xs-12 portfolio-item joomla">
-							<div class="view efffect">
-								<div class="portfolio-image">
-									<img src="images/portfolio/11.jpg" alt=""></div> 
-									<div class="mask text-center">
-										<h3>Novel</h3>
-										<h4>Lorem ipsum dolor sit amet consectetur</h4>
-										<a href="#"><i class="fa fa-link"></i></a>
-										<a href="images/portfolio/big-item3.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3 col-xs-12 portfolio-item megento">
-								<div class="view efffect">
-									<div class="portfolio-image">
-										<img src="images/portfolio/12.jpg" alt=""></div> 
-										<div class="mask text-center">
-											<h3>Novel</h3>
-											<h4>Lorem ipsum dolor sit amet consectetur</h4>
-											<a href="#"><i class="fa fa-link"></i></a>
-											<a href="images/portfolio/big-item4.jpg" data-gallery="prettyPhoto"><i class="fa fa-search-plus"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> 
-
-					</section> <!--/#portfolio-->
-
+			</div>
+				</section>
 					<section id="clients" class="parallax-section">
 						<div class="container">
 							<div class="clients-wrapper">
 								<div class="row text-center">
 									<div class="col-sm-8 col-sm-offset-2">
-										<h2 class="title-one">Clients Say About Us</h2>
+										<h2 class="title-one">Testimonials</h2>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
 									</div>
 								</div>

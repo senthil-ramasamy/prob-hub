@@ -1,56 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Solns</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Solnname</th>
-      <th>Solntext</th>
-      <th>Solnauthor</th>
-      <th>Solnid</th>
-      <th>Solndate</th>
-      <th>Prob</th>
-      <th>Solnvotes</th>
-      <th>Solnrating</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @solns.each do |soln| %>
-      <tr>
-        <td><%= soln.solnname %></td>
-        <td><%= soln.solntext %></td>
-        <td><%= soln.solnauthor %></td>
-        <td><%= soln.solnid %></td>
-        <td><%= soln.solndate %></td>
-        <td><%= soln.prob %></td>
-        <td><%= soln.solnvotes %></td>
-        <td><%= soln.solnrating %></td>
-        <td><%= link_to 'Show', soln %></td>
-        <td><%= link_to 'Edit', edit_soln_path(soln) %></td>
-        <td><%= link_to 'Destroy', soln, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "upvote", like_soln_path(soln), method: :put %></td>
-        <td><%= link_to "downvote", dislike_soln_path(soln), method: :put %></td>
-        <td><%= soln.get_upvotes.size - soln.get_downvotes.size %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Soln', new_soln_path %>
-
-
-<p id="notice"><%= notice %></p>
+<br><p id="notice"><%= notice %></p>
 <div class="container">
   
 <div class="jumbotron">
-  <center><h2>Problems Exploration!</h2></center>
+  <center><h2>Lets find Solutions!</h2></center>
   <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Problem</a></p></center>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore Solutions</a> <a class="btn btn-primary btn-md" href="/probs" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Explore Problem</a></p></center>
 </div>
     <table class="table">
         <thead>
@@ -89,4 +43,4 @@
 </div>
 <br>
 <center>
-<%= link_to '+ Participate', probs_path, class: "btn btn-primary btn-md" %></center>
+<%= link_to '+ Participate', new_soln_path, class: "btn btn-primary btn-md" %></center>
