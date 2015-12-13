@@ -12,13 +12,12 @@
             <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @soln.solnrating %></li>
           </ul>
           <p>
-            <%= @soln.solntext %>
+            <%= raw(@soln.solntext) %>
           </p>
 
 
           <p>
-            <strong>Prob:</strong>
-            <%= @soln.prob %>
+            <strong>Prob: Is Digital Locker Safe</strong>
           </p>
 
           <p>
@@ -43,13 +42,13 @@
             <div class="media-body">
               <h4 class="media-heading">
                 Muthu
-              </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              </h4> I think thats a good idea!
               <div class="media">
                  <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
                 <div class="media-body">
                   <h4 class="media-heading">
                     Senthil
-                  </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </h4> Voila! We can also have Challenges too :)
                 </div>
               </div>
             </div>
@@ -71,7 +70,7 @@
             <button class="btn btn-primary" type="button">
               <em class="glyphicon glyphicon-align-right"></em> Null
             </button> 
-            <button class="btn btn-default" type="button">
+            <button class="btn btn-warning" type="button">
               <em class="glyphicon glyphicon-align-justify"></em> Absent :P
             </button>
           </div>
@@ -79,10 +78,10 @@
             Proposed Soln
           </h2>
           <p>
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            Prachna, India's iniiative allows the user to file complaint online!
           </p>
           <p>
-            <a class="btn" href="#">View details »</a>
+            <a class="btn" href="#">View details </a>
           </p>
         </div>
       </div>
@@ -90,10 +89,5 @@
   </div>
 </div>
 
-
-
-<%= link_to 'Edit', edit_soln_path(@soln) %> |
-<%= link_to 'Back', solns_path %>
-</div>
 </body>
 </html>
