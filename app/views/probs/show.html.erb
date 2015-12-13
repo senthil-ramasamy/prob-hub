@@ -18,7 +18,7 @@
   <h1><%= @prob.pname %></h1>
   <ul class="post-meta">
           <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @prob.person %></li>
-          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @prob.pdate %></li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @prob.created_at %></li>
           <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @prob.rateing %></li>
           <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions: </strong><%= @prob.solns.count %></li>
         </ul>
@@ -32,12 +32,12 @@
           <blockquote class="blockquote-reverse">
           <p>
             <strong></strong>
-            <%= comment.pversion.first(100) %>
+            <%= raw(comment.pversion.first(100)) %>
           </p>
          
           <footer>
             <strong>Date:</strong>
-            <%= comment.pvdate %>
+            <%= comment.created_at %>
              |  <%= link_to 'Show Versions', comment %>
           </footer>
          
@@ -74,20 +74,8 @@
 
         <div class="row">
           <div class="small-2 large-2 columns">
-                    <p>
-          <strong>Votes:</strong>
-          <%= @prob.votes %>
-        </p>
-
-
-
         <p>
-          <strong>Points:</strong>
-          <%= @prob.points %>
-        </p>
-
-        <p>
-          <strong>Tag:</strong>
+          <strong>Tag:#</strong>
           <%= @prob.tag %>
         </p>
 
@@ -97,11 +85,9 @@
         </p>
             <%= imdb_style_rating_for @prob, current_user%>
           </div>
-          <br>
           <div class="small-2 large-4 columns">
             <% if current_user %>
-              Rating on Various Factors: 
-               <%= rating_for @prob, "Factor1" %>
+              Potential: <%= rating_for @prob, "Factor1" %> <br/> Validity : <%= rating_for @prob, "Factor2" %> <br>
             <% end %>
           </div>
         </div>
@@ -147,7 +133,18 @@
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading">Media App</h4>
+    Lorem Ipsum
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="http://icons.iconarchive.com/icons/martz90/circle/128/app-draw-icon.png" alt="app icon">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Object App</h4>
     Lorem Ipsum
   </div>
 </div>

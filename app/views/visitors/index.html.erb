@@ -7,7 +7,7 @@
 				<li data-target="#main-carousel" data-slide-to="2"></li>
 			</ol><!--/.carousel-indicators--> 
 			<div class="carousel-inner">
-				<div class="item active" style="background-image: url(https://www.emptyengine.com/wp-content/uploads/2015/11/What-is-Digital-India.jpg)"> 
+				<div class="item active" style="background-image: url(https://www.emptyengine.com/wp-content/uploads/2015/11/What-is-Digital-India.jpg);opacity:0.8;"> 
 					<div class="carousel-caption"> 
 						<div> 
 							<h2 class="heading animated bounceInDown">Problems are just Challenges</h2> 
@@ -23,7 +23,7 @@
 					</div> 
 				</div> 
 			</div> 
-			<div class="item" style="background-image: url(images/slider/slide1.jpg)"> 
+			<div class="item" style="background-image: url(http://ynetworks.in/wp-content/uploads/2014/10/digital-india.jpg);opacity:0.4;"> 
 				<div class="carousel-caption"> 
 					<div> 
 						<h2 class="heading animated bounceInRight">Prachana : Lets start playing !</h2> 
@@ -35,7 +35,7 @@
 		</div><!--/.carousel-inner-->
 
 		<a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-		<a class="carousel-right member-carousel-control hidden-xs" href="#main-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+		<a class="carousel-right member-carousel-control hidden-xs" href="#main-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>	
 	</div> 
 
 </section><!--/#home-->
@@ -90,7 +90,7 @@
 								<div class="single-service">
 									<i class=" fa fa-hourglass-start "></i>
 									<h2><%= link_to soln.solnname , soln  %></h2>
-									<p><%= soln.solntext.first(250) %></p>
+									<p><%= raw(soln.solntext.first(250)) %></p>
 								</div>
 							</div>
 							<% end %>

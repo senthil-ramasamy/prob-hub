@@ -30,9 +30,9 @@
                   <li><i class="glyphicon glyphicon-star"></i><strong> Prize : Rs.<%= challenge.chalprize %></strong></li>
                   <li><i class="glyphicon glyphicon-comment"></i><strong> Desc:</strong></li>
                 </ul>
-                <p><%= challenge.chaltext.first(150) %></p>
+                <p><%= raw(challenge.chaltext.first(150)) %></p>
                 
-              <td><h4>Rs.<%= challenge.chalprize %><h4></td>
+              <td><h4><%= challenge.chalprize %><h4></td>
               <td><h4><%= challenge.chalsponsor %></h4></td>
               <td><%= link_to 'Explore !', challenge,  class: "btn btn-primary btn-md" %></td>
               </td>
