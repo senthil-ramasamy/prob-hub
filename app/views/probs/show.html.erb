@@ -1,4 +1,4 @@
-
+<br>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -24,7 +24,7 @@
         </ul>
         <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
            </center>
-  <p><p><%= @prob.pstatement %></p></p>
+  <p><p><%= raw(@prob.pstatement) %></p></p>
   <h4  align="right">Checkout Versions !</h4>
   
         
@@ -38,11 +38,11 @@
           <footer>
             <strong>Date:</strong>
             <%= comment.pvdate %>
-             |  <%= link_to 'Show', comment %>
+             |  <%= link_to 'Show Versions', comment %>
           </footer>
          
         <% end %>
-        <p align="right"><button class="btn btn-primary btn-md pro">Show</button><button class="btn btn-primary btn-md pro2">Hide</button></p>
+        <p align="right"><button class="btn btn-primary btn-md pro">Create Version</button><button class="btn btn-primary btn-md pro2">Hide</button></p>
         <div class="mast">
         <%= form_for([@prob, @prob.vprobs.build]) do |f| %>
           <p>
@@ -127,7 +127,7 @@
    <% end %>
           
       
-        <button class="btn btn-primary btn-md slo">Show</button><button class="btn btn-primary btn-md slo2">Hide</button>
+        <button class="btn btn-primary btn-md slo">Create Soln</button><button class="btn btn-primary btn-md slo2">Hide</button>
         <div class="mast2">
         <%= form_for([@prob, @prob.solns.build]) do |f| %>
           <p>

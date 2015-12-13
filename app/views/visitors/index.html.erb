@@ -16,7 +16,7 @@
 						</div> 
 					</div> 
 				</div>
-				<div class="item" style="background-image: url(images/slider/slide2.jpg)"> 
+				<div class="item" style="background-image: url(https://i.ytimg.com/vi/rTzGMcOd8D0/maxresdefault.jpg)"> 
 					<div class="carousel-caption"> <div> 
 						<h2 class="heading animated bounceInDown">Lets make it a sport !</h2> 
 						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
@@ -61,7 +61,7 @@
 											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2015</li>
 										</ul>
 										<div class="blog-content">
-											<p><%= prob.pstatement.first(100) %></p>
+											<p><%= raw(prob.pstatement.first(100)) %></p>
 										</div>
 										<a href="/probs" class="btn btn-primary">Read More</a>
 									</div>
@@ -118,9 +118,9 @@
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
 									<img src="http://www.clker.com/cliparts/f/A/y/K/p/Q/solution-md.png" />
-									<h4><%= challenge.chalname %></h4>
+									<h4><%=  link_to challenge.chalname, challenge %></h4>
 									<h5>Rs.<%= challenge.chalprize %></h5>
-									<p><%= challenge.chaltext.first(150) %></p>
+									<p><%= raw(challenge.chaltext.first(150)) %></p>
 								</div>
 							</div>
 							<% end %>
@@ -129,69 +129,6 @@
 				</div>
 			</div>
 		</section><!--/#Our-Team-->
-
-		<section id="portfolio">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="title-one">Complaint Log it Up !</h2>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
-						<a class="btn btn-primary" href="/complaints">Complaints</a>
-					</div>
-				</div>
-			</div>
-				</section>
-					<section id="clients" class="parallax-section">
-						<div class="container">
-							<div class="clients-wrapper">
-								<div class="row text-center">
-									<div class="col-sm-8 col-sm-offset-2">
-										<h2 class="title-one">Testimonials</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-									</div>
-								</div>
-								<div id="clients-carousel" class="carousel slide" data-ride="carousel"> <!-- Indicators -->
-									<ol class="carousel-indicators">
-										<li data-target="#clients-carousel" data-slide-to="0" class="active"></li>
-										<li data-target="#clients-carousel" data-slide-to="1"></li>
-										<li data-target="#clients-carousel" data-slide-to="2"></li>
-									</ol> <!-- Wrapper for slides -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<div class="single-client">
-												<div class="media">
-													<img class="pull-left" src="images/clients/client1.jpg" alt="">
-													<div class="media-body">
-														<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="item">
-											<div class="single-client">
-												<div class="media">
-													<img class="pull-left" src="images/clients/client3.jpg" alt="">
-													<div class="media-body">
-														<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="item">
-											<div class="single-client">
-												<div class="media">
-													<img class="pull-left" src="images/clients/client2.jpg" alt="">
-													<div class="media-body">
-														<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section><!--/#clients-->
 
 					
 
@@ -211,7 +148,7 @@
 									<div class="pattern"></div>
 									<div class="row text-center clearfix">
 										<div class="col-sm-6">
-											<div class="contact-address"><address><p><span>Devs</span>Cluster</p><strong>36 North Kafrul<br>Dhaka Cantonment Area<br> Dhaka-1206, Bangladesh</strong><br><small>( Lorem ipsum dolor sit amet, consectetuer adipiscing elit )</small></address>
+											<div class="contact-address"><address><p><span>Devs</span>Cluster</p><strong>36 North Kafrul<br>ka Cantonment Area<br> BaDhaka-1206, India</strong><br><small>( Lorem ipsum dolor sit amet, consectetuer adipiscing elit )</small></address>
 												<div class="social-icons">
 													<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
 													<a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>

@@ -1,44 +1,99 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+          <h1><%= @soln.solnname %></h1>
+          <ul class="post-meta">
+            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @soln.solnauthor %></li>
+            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @soln.solndate %></li>
+            <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @soln.solnrating %></li>
+          </ul>
+          <p>
+            <%= @soln.solntext %>
+          </p>
 
-<p>
-  <strong>Solnname:</strong>
-  <%= @soln.solnname %>
-</p>
 
-<p>
-  <strong>Solntext:</strong>
-  <%= @soln.solntext %>
-</p>
+          <p>
+            <strong>Prob:</strong>
+            <%= @soln.prob %>
+          </p>
 
-<p>
-  <strong>Solnauthor:</strong>
-  <%= @soln.solnauthor %>
-</p>
+          <p>
+            <strong>Solnvotes:1</strong>
+            
+          </p>
+          <a href="localhost:4000" class="btn btn-primary btn-md" target="_blank" >Version It</a>
 
-<p>
-  <strong>Solnid:</strong>
-  <%= @soln.solnid %>
-</p>
+</div>
+</section>
 
-<p>
-  <strong>Solndate:</strong>
-  <%= @soln.solndate %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Discussion
+          </h3>
+          <div class="media">
+             <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Muthu
+              </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              <div class="media">
+                 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
+                <div class="media-body">
+                  <h4 class="media-heading">
+                    Senthil
+                  </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            Proposed Soln and Decision
+          </h3>
+          <img src="http://s1.postimg.org/axyi3ndpb/graph.png">
+          <div class="btn-group btn-group-md">
+             
+            <button class="btn btn-success " type="button">
+              <em class="glyphicon glyphicon-align-left"></em> I Agree
+            </button> 
+            <button class="btn btn-danger" type="button">
+              <em class="glyphicon glyphicon-align-center"></em> Disagree
+            </button> 
+            <button class="btn btn-primary" type="button">
+              <em class="glyphicon glyphicon-align-right"></em> Null
+            </button> 
+            <button class="btn btn-default" type="button">
+              <em class="glyphicon glyphicon-align-justify"></em> Absent :P
+            </button>
+          </div>
+          <h2>
+            Proposed Soln
+          </h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          </p>
+          <p>
+            <a class="btn" href="#">View details »</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Prob:</strong>
-  <%= @soln.prob %>
-</p>
 
-<p>
-  <strong>Solnvotes:</strong>
-  <%= @soln.solnvotes %>
-</p>
-
-<p>
-  <strong>Solnrating:</strong>
-  <%= @soln.solnrating %>
-</p>
 
 <%= link_to 'Edit', edit_soln_path(@soln) %> |
 <%= link_to 'Back', solns_path %>
+</div>
+</body>
+</html>

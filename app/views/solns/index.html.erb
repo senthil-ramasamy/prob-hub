@@ -32,8 +32,12 @@
                 <td><%= link_to 'Explore !', soln, class: "btn btn-primary btn-md" %></td>
               </td>
               <td><h4><%= soln.solnrating %><h4></td>
-              <td><h4><%= soln.solnvotes %></h4></td>
-            </tr>
+              <td>
+                <%= link_to "upvote", like_soln_path(soln), method: :put %><br>
+                <%= soln.get_upvotes.size - soln.get_downvotes.size %><br>
+                <%= link_to "downvote", dislike_soln_path(soln), method: :put %>
+              </td>
+          
           </tr>
     <% end %>
   </tbody>
